@@ -1,0 +1,317 @@
+    1  git help
+    2  git help add
+    3  git help pull
+    4  ls
+    5  ls
+    6  pwd
+    7  cd training
+    8  pwd
+    9  mkdir gitlabs
+   10  cd gitlabs
+   11  git config
+   12  git config help
+   13  git help config
+   14  git config --get-all
+   15  git config --all
+   16  git config --get
+   17  git config -l
+   18  git config -add
+   19  git config --add
+   20  git config --global --add
+   21  git config --add user.name=20wh1a0441@bvrithyderabad.edu.in --global
+   22  git config --global --add user.name=20wh1a0441@bvrithyderabad.edu.in
+   23  cd
+   24  pwd
+   25  ls -l
+   26  touch .gitconfig
+   27  cat .gitconfig
+   28  git config --global --add user.name=20wh1a0441@bvrithyderabad.edu.in
+   29  cd training/gitlabs
+   30  pwd
+   31  git config --list
+   32  git config --global --list
+   33  git config --global user.name suma
+   34  git config --global user.email 20wh1a0441@bvrithyderabad.edu.in
+   35  git config --global --list
+   36  cd ~
+   37  pwd
+   38  touch .gitignore
+   39  cat .gitignore
+   40  echo bin>>.gitignore
+   41  echo target >>.gitgnore
+   42  echo '*~' >>.gitignore
+   43  cat .gitignore
+   44  echo target >>.gitignore
+   45  cat .gitignore
+   46  echo .metadata >>.gitignore
+   47  git config --global core.excludesfile ~/.gitignore
+   48  git config --global --list
+   49  pwd
+   50  cd gitlabs
+   51  cd gitlabs/
+   52  cd training/gitlabs
+   53  mkdir repo1
+   54  cd repo1
+   55  git init
+   56  ls
+   57  ls -a
+   58  ls -a .git
+   59  git config --list
+   60  git config --local --list
+   61  mkdir datafiles
+   62  echo "datafile1" >datafiles/datafile1.txt
+   63  echo "This is a sample text file" >file2.txt
+   64  ls datafiles > datafiles/filelist.txt
+   65  ls
+   66  ls datafiles
+   67  git status
+   68  git stage .
+   69  git status
+   70  echo "new line of text" >>file2.txt
+   71  git status
+   72  git stage 
+   73  git status
+   74  git stage .
+   75  git status
+   76  git rm --cache file2.txt
+   77  git status
+   78  cat file2.txt
+   79  git add file2.txt
+   80  git status
+   81  git commit -m "Project Initialized"
+   82  git status
+   83  echo "A class file" >temp~.txt
+   84  git status
+   85  mkdir bin
+   86  echo "Sample file" >bin/file1.txt
+   87  git status
+   88  echo "Sample file" >bin/file1.dat
+   89  git status
+   90  git rm cache --file1.txt
+   91  cd bin
+   92  rm file1.txt
+   93  ls
+   94  cd
+   95  cd training/gitlabs/repo1
+   96  git status
+   97  cat ~/.gitignore
+   98  echo "Temp file" >temp.txt~
+   99  git status
+  100  git config --global --list
+  101  git log
+  102  git commit -m "a new file added"
+  103  git stage .
+  104  git status
+  105  git log
+  106  git commit -m "a new file added"
+  107  git status
+  108  git log
+  109  cat ~/.gitignore
+  110  ls
+  111  git show
+  112  rm temp~.txt
+  113  git status
+  114  git stage .
+  115  git status
+  116  git commit -m "Remove file temp~.txt"
+  117  git log
+  118  git show
+  119  git reset HEAD~1 -- temp~.txt
+  120  git status
+  121  git restore temp~.txt
+  122  git status
+  123  git commit -m "Restored file temp~.txt"
+  124  git status
+  125  git log
+  126  echo "useless data" >>temp~.txt
+  127  echo "unwanted file" >>unwantedfile.txt
+  128  git status
+  129  cat temp~.txt
+  130  git restore temp~.txt
+  131  cat temp~.txt
+  132  git status
+  133  rm unwantedfile.txt
+  134  git status
+  135  echo "unwanted file" >>unwantedfile.txt
+  136  git status
+  137  echo "unwantedfile.txt" >>~/.gitignore
+  138  git status
+  139  git log
+  140  git commit --amend -m "A modified commit message"
+  141  git log
+  142  touch .gitignore
+  143  echo "bin" >>gitignore
+  144  echo "bin" >>.gitignore
+  145  echo ".metadata" >>.gitignore
+  146  echo "doNotTrackFile.txt" ??.gitignore
+  147  echo "doNotTrackFile.txt" >>.gitignore
+  148  ls
+  149  ls -a
+  150  cat .gitignore
+  151  rm gitignore
+  152  ls
+  153  ls -a
+  154  cat .gitignore
+  155  git status
+  156  git commit -m "Added .gitignore file"
+  157  git commit -m "Added .gitignore file"
+  158  git add gitignore
+  159  git restore .gitignore
+  160  git add .gitignore
+  161  git commit -m "Added .gitignore file"
+  162  git clone --bare . ../remote-repo.git
+  163  ls ..
+  164  cd ../remote-repo.git
+  165  ls
+  166  cd HEAD
+  167  cat HEAD
+  168  cd refs
+  169  ls
+  170  ls -a
+  171  cd heads
+  172  ls
+  173  ls -a
+  174  pwd
+  175  cd ../repo1
+  176  cd ../heads
+  177  cd ../refs
+  178  cd ..
+  179  cd ..
+  180  pwd
+  181  cd ../repo1
+  182  ls -a
+  183  ls .git
+  184  cd ..
+  185  ls
+  186  mkdir repo2
+  187  cd repo2
+  188  ls -a
+  189  git clone ../remote-repo.git/ .
+  190  ls
+  191  ls -a
+  192  git log
+  193  git status
+  194  pwd
+  195  echo "File added in repo2" > repo2File.txt
+  196  git status
+  197  git stage .
+  198  git status
+  199  git commit -m "developer 2 added new file"
+  200  git push ../remote-repo.git
+  201  cd ../repo1
+  202  git pull ../remote-repo.git
+  203  ls
+  204  git status
+  205  ls >fileList.txt
+  206  ls
+  207  git status
+  208  git stage fileList.txt
+  209  git commit -m "developer1 create a new file"
+  210  git push ../remote-repo.git
+  211  cd ../repo2
+  212  git pull
+  213  ls
+  214  git pull ../remote-repo.git
+  215  ls
+  216  cd ../repo1
+  217  git push --set-upstream ../remote-repo.git/ master
+  218  cd ../repo2
+  219  git pull
+  220  ls
+  221  git config --list
+  222  git config --list --local
+  223  echo "new file in repo2" >test02
+  224  git stage test02
+  225  git commit -m 'test02 file added in repo2'
+  226  git push origin
+  227  cd ../repo1
+  228  git config --global --list
+  229  git pull../remote-repo.git
+  230  git pull ../remote-repo.git
+  231  cd ..
+  232  history > listofcmds.txt
+  233  ls
+  234  mkdir online
+  235  cd online
+  236  git clone git://github.com/Suma441/TestRepo
+  237  git clone git://github.com/Suma441/TestRepo.git
+  238  git clone https://github.com/Suma441/TestRepo.git
+  239  ls
+  240  cd TestRepo
+  241  ls
+  242  java
+  243  ls -a
+  244  java
+  245  ls ~/training/j
+  246  ls ~/training/javalabs
+  247  cat ~/training/javalabs/setEnv.bat
+  248  ~/training/javalabs/setEnv.bat
+  249  java
+  250  java_home
+  251  Java
+  252  java
+  253  exit
+  254  java
+  255  cd training/gitlabs/online/TestRepo
+  256  mkdir -p com/test
+  257  cd com/test
+  258  vi HelloWorld.java
+  259  javac HelloWorld.java
+  260  vi HelloWorld.java
+  261  javac HelloWorld.java
+  262  javac HelloWorld
+  263  java HelloWorld
+  264  ls
+  265  git status
+  266  git syage .
+  267  git stage .
+  268  git status
+  269  grep
+  270  cat .gitignore | grep class
+  271  cat .gitignore | grep class
+  272  cd ..
+  273  cd ..
+  274  git status
+  275  grep
+  276  cat .gitignore | grep class
+  277  git commit -m "HelloWorld.java added"
+  278  git remote
+  279  git remote add github_https https://github.com/Suma441/TestRepo.git
+  280  git remote
+  281  git push github_https
+  282  git remote show origin
+  283  git remote show github_https
+  284  cd ../repo2
+  285  cd ../../repo2
+  286  git remote
+  287  git remote show origin
+  288  cd ../repo1
+  289  git remote
+  290  cd ../online/TestRepo
+  291  git remote -v
+  292  git branch
+  293  git branch -a
+  294  git branch -r
+  295  git branch testing
+  296  git branch
+  297  git branch mbranch
+  298  git branch -m mbranch mybranch
+  299  git branch -d mybranch
+  300  git branch
+  301  git branch -d mybranch
+  302  git checkout testing
+  303  ls
+  304  cd com/test
+  305  vi HelloWorld.java
+  306  cat HelloWorld.java
+  307  git checkout main
+  308  pwd
+  309  cat HelloWorld.java
+  310  git checkout testing
+  311  git status
+  312  git stage .
+  313  git status
+  314  git commit -m "modified java in test branch"
+  315  git checkout main
+  316  cat HelloWorld.java
+  317  history >listofcmds.txt
